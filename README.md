@@ -30,7 +30,6 @@ Finally, log into your ghost instance and activate the theme by switching to **S
 ## Copyright & License
 
 mobuxer is open source and released under the MIT License, and contributions to the code base are welcome and encouraged. Find more information about contributing here.
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Copyright (c) 2020 Kurt Klinner - Released under The MIT License.
+Copyright (c) 2020 Kurt Klinner - Released under The MIT License  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
