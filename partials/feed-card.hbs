@@ -1,0 +1,56 @@
+<article class="post-card {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+    <div class="post-card-inner">
+        {{#if feature_image}}
+            <div class="post-card-featured-image">
+                <a class="post-card-image-link" href="{{url}}">
+                    <figure class="post-card-image">
+                        <img srcset="{{img_url feature_image size="s"}} 300w,
+                                     {{img_url feature_image size="m"}} 600w,
+                                     {{img_url feature_image size="l"}} 1000w,
+                                     {{img_url feature_image size="xl"}} 2000w"
+                             src="{{img_url feature_image size="m"}}"
+                             alt="{{title}}" />
+                    </figure>
+                </a>
+            </div>
+        {{/if}}
+
+        <div class="post-card-content">
+            <header class="post-card-header">
+                <a href="{{url}}">
+                    <h4 class="post-card-title">{{title}}</h4>
+                </a>
+            </header>
+
+            <section class="post-card-excerpt">
+                <p>{{excerpt words="15"}}[...]</p>
+            </section>
+
+            <footer class="post-card-meta">
+                <ul class="author-list horizontal-list">
+                    {{#foreach authors}}
+                        <li class="author-list-item">
+                            <a href="{{url}}">
+                                <span class="author-name-tooltip">{{name}}</span>
+                            </a>
+                        </li>
+                    {{/foreach}}
+                </ul>
+                    {{#if tags}}
+                            <ul class="author-list horizontal-list">
+                                {{#foreach tags}}
+                                    <li><a href="{{url}}" class="author-name-tooltop">#{{name}}</a>&nbsp;</li>
+                                {{/foreach}}
+                            </ul>
+                    {{/if}}
+
+                <span class="card-post-date">
+                    <i class="far fa-clock"></i>
+                    <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">
+                        {{date format="DD MMMM YYYY"}}
+                    </time>
+                </span>
+            </footer>
+        </div>
+    </div>
+</article>

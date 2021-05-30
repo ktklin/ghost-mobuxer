@@ -1,0 +1,20 @@
+<ul class="vertical large-horizontal menu top-menu" role="menu">
+    {{#foreach navigation}}
+        <li class="menu-item nav-{{slug}}{{#if current}} nav-current{{/if}}" role="menuitem">
+            <a href="{{url absolute="true"}}">{{label}}</a>
+        </li>
+    {{/foreach}}
+    <li style='padding-right:1rem' ></li>
+    <li class="menu-item">
+        <a href="https://twitter.com/[your-user]" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
+    </li>
+    <li class="menu-item">
+        <a href="https://www.linkedin.com/in/[your-user]" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </li>
+    <li class="menu-item">
+        <a href="https://github.com/[your-user]" target="_blank" rel="noopener" title="Github"><i class="fab fa-github-alt"></i></a>
+    </li>
+    <li class="menu-item">
+        <a href="http://cloud.feedly.com/#subscription/feed/{{@site.url}}/rss/" target="_blank" title="RSS" rel="noopener"><i class="fa fa-rss"></i></a>
+    </li>
+</ul>
